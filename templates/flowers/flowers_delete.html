@@ -1,0 +1,10 @@
+{% extends '_flowers_base.html' %}
+{% block title %}{{flowers.name}} Delete{% endblock %}
+{% block content %}
+
+<form method="post">{% csrf_token %}
+    <p> Are you sure to delete "{{ object }}" flower from list ?</p>
+    <input type="submit" value="yes">
+</form>
+
+{% endblock %}

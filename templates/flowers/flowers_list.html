@@ -1,0 +1,16 @@
+{% extends '_flowers_base.html' %}
+{% block title %}Flowers List{% endblock %}
+{% block content %}
+</br>
+<img src="https://florgeous.com/wp-content/uploads/2019/10/flower-names.jpg" >
+<ul>
+    {% for flowers in object_list %}
+    <li>
+        <a href="{% url 'flowers_detail' flowers.pk %}">{{ flowers.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a style= "font-weight: bolder;color: black;font-size: larger ; background-color: rgb(247, 243, 53);"href="{% url 'flowers_create' %}"> Create New flower</a>
+
+{% endblock %}
